@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background_dark">
+
+    <!-- Tytuł formularza -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Group"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Pole do wpisania nazwy grupy -->
+    <EditText
+        android:id="@+id/editTextGroupName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter group name"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="1"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Przyciski do wyboru dostępności w kalendarzu -->
+    <Button
+        android:id="@+id/buttonSelectAvailability"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Select Availability"
+        android:backgroundTint="@android:color/white"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/editTextGroupName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Pole do dodania członków -->
+    <EditText
+        android:id="@+id/editTextAddMembers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter member email"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/buttonSelectAvailability"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="1"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Pole wyszukiwania członków grupy -->
+    <EditText
+        android:id="@+id/editTextSearchMembers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Search members"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/editTextAddMembers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="1"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Link do udostępnienia -->
+    <EditText
+        android:id="@+id/editTextShareLink"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="https://meetup.com/433nfa210"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/editTextSearchMembers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="1"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Checkbox do rozliczania -->
+    <CheckBox
+        android:id="@+id/checkboxSettleAccounts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settle account with each other"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/editTextShareLink"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Przycisk utworzenia grupy -->
+    <Button
+        android:id="@+id/buttonCreateGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Create Group"
+        android:backgroundTint="@android:color/white"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/checkboxSettleAccounts"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+    <Button
+        android:id="@+id/buttonCancelCreateGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:backgroundTint="@android:color/white"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/buttonCreateGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
