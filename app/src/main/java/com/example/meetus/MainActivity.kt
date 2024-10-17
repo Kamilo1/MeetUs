@@ -64,6 +64,12 @@ class MainActivity : AppCompatActivity() {
 
                     true
                 }
+                R.id.nav_sign_in -> {
+                    // Przejście do ekranu logowania
+                    val intent = Intent(this, SignInActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
                 else -> false
             }
         }
